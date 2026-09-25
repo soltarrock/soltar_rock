@@ -68,6 +68,68 @@ a{
 
 
 /* =========================
+   SECCIONES
+========================= */
+
+section{
+  margin-top:38px;
+}
+
+h2{
+  margin:0 0 14px;
+
+  font-family:"Arial Narrow","Roboto Condensed",Arial,sans-serif;
+  font-size:17px;
+  letter-spacing:.045em;
+  font-weight:900;
+  font-style:italic;
+
+  color:#e4e8e8;
+
+  border-bottom:1px solid var(--line);
+  padding-bottom:9px;
+}
+
+
+/* =========================
+   PRÓXIMAS FECHAS
+========================= */
+
+.dates{
+  border-top:2px solid var(--petrol);
+}
+
+.date{
+  display:grid;
+  grid-template-columns:80px 1fr;
+  gap:12px;
+
+  padding:16px 5px;
+  border-bottom:1px solid var(--line);
+}
+
+.when{
+  color:var(--petrol2);
+  font-size:16px;
+  font-weight:800;
+}
+
+.where{
+  font-size:15px;
+  font-weight:700;
+}
+
+.where span{
+  display:block;
+  margin-top:5px;
+
+  color:var(--muted);
+  font-size:13px;
+  font-weight:400;
+}
+
+
+/* =========================
    QUEDATE ASÍ
 ========================= */
 
@@ -75,6 +137,7 @@ a{
   position:relative;
   display:flex;
   align-items:flex-end;
+
   min-height:245px;
   overflow:hidden;
 
@@ -153,30 +216,6 @@ a{
 
 
 /* =========================
-   SECCIONES
-========================= */
-
-section{
-  margin-top:38px;
-}
-
-h2{
-  margin:0 0 14px;
-
-  font-family:"Arial Narrow","Roboto Condensed",Arial,sans-serif;
-  font-size:17px;
-  letter-spacing:.045em;
-  font-weight:900;
-  font-style:italic;
-
-  color:#e4e8e8;
-
-  border-bottom:1px solid var(--line);
-  padding-bottom:9px;
-}
-
-
-/* =========================
    REDES
 ========================= */
 
@@ -224,44 +263,6 @@ h2{
 
 .link.youtube svg{
   fill:#ff0033;
-}
-
-
-/* =========================
-   FECHAS
-========================= */
-
-.dates{
-  border-top:2px solid var(--petrol);
-}
-
-.date{
-  display:grid;
-  grid-template-columns:80px 1fr;
-  gap:12px;
-
-  padding:16px 5px;
-  border-bottom:1px solid var(--line);
-}
-
-.when{
-  color:var(--petrol2);
-  font-size:16px;
-  font-weight:800;
-}
-
-.where{
-  font-size:15px;
-  font-weight:700;
-}
-
-.where span{
-  display:block;
-  margin-top:5px;
-
-  color:var(--muted);
-  font-size:13px;
-  font-weight:400;
 }
 
 
@@ -361,6 +362,17 @@ footer{
 
   .links{
     grid-template-columns:1fr;
+    gap:8px;
+  }
+
+  .link{
+    min-height:50px;
+    padding:0 14px;
+  }
+
+  .link svg{
+    width:21px;
+    height:21px;
   }
 
   .logo{
@@ -382,7 +394,9 @@ footer{
 <main>
 
 
-<!-- CABECERA -->
+<!-- ======================
+     CABECERA
+====================== -->
 
 <header>
 
@@ -396,6 +410,84 @@ footer{
 Canciones para encontrarnos
 </div>
 
+</header>
+
+
+<!-- ======================
+     PRÓXIMAS FECHAS
+====================== -->
+
+<section>
+
+<h2>PRÓXIMAS FECHAS</h2>
+
+<div class="dates">
+
+
+<div class="date">
+<div class="when">27 SEP</div>
+<div class="where">
+Fundación Soldi
+<span>Glew · 13:30 hs</span>
+</div>
+</div>
+
+
+<div class="date">
+<div class="when">10 OCT</div>
+<div class="where">
+Casa Contrakultura
+<span>Solano · 22:30 hs</span>
+</div>
+</div>
+
+
+<div class="date">
+<div class="when">11 OCT</div>
+<div class="where">
+Campo Amat
+<span>Monte Grande · 20:00 hs</span>
+</div>
+</div>
+
+
+<div class="date">
+<div class="when">21 OCT</div>
+<div class="where">
+TV Pública · La Noche es Nuestra
+<span>21:30 hs</span>
+</div>
+</div>
+
+
+<div class="date">
+<div class="when">11 DIC</div>
+<div class="where">
+El Templo Bar
+<span>Monte Grande · 21:00 hs</span>
+</div>
+</div>
+
+
+<div class="date">
+<div class="when">18 DIC</div>
+<div class="where">
+Teatro Greison
+<span>Monte Grande · 21:00 hs</span>
+</div>
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ======================
+     QUEDATE ASÍ
+====================== -->
+
+<section>
 
 <a
   class="hero"
@@ -431,10 +523,12 @@ ESCUCHÁ QUEDATE ASÍ EN SPOTIFY
 
 </a>
 
-</header>
+</section>
 
 
-<!-- REDES -->
+<!-- ======================
+     REDES
+====================== -->
 
 <section>
 
@@ -519,68 +613,9 @@ TikTok
 </section>
 
 
-<!-- PRÓXIMAS FECHAS -->
-
-<section>
-
-<h2>PRÓXIMAS FECHAS</h2>
-
-<div class="dates">
-
-<div class="date">
-<div class="when">27 SEP</div>
-<div class="where">
-Fundación Soldi
-<span>Glew · 13:30 hs</span>
-</div>
-</div>
-
-<div class="date">
-<div class="when">10 OCT</div>
-<div class="where">
-Casa Contrakultura
-<span>Solano · 22:30 hs</span>
-</div>
-</div>
-
-<div class="date">
-<div class="when">11 OCT</div>
-<div class="where">
-Campo Amat
-<span>Monte Grande · 20:00 hs</span>
-</div>
-</div>
-
-<div class="date">
-<div class="when">21 OCT</div>
-<div class="where">
-TV Pública · La Noche es Nuestra
-<span>21:30 hs</span>
-</div>
-</div>
-
-<div class="date">
-<div class="when">11 DIC</div>
-<div class="where">
-El Templo Bar
-<span>Monte Grande · 21:00 hs</span>
-</div>
-</div>
-
-<div class="date">
-<div class="when">18 DIC</div>
-<div class="where">
-Teatro Greison
-<span>Monte Grande · 21:00 hs</span>
-</div>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACTO -->
+<!-- ======================
+     CONTACTO
+====================== -->
 
 <section>
 
