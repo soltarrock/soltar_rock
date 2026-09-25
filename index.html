@@ -81,16 +81,38 @@ a{
   border-radius:7px;
   border:1px solid #324345;
 
+  background:#080b0c;
+
+  transition:.2s ease;
+}
+
+.hero-video{
+  position:absolute;
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  z-index:0;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
   background:
     linear-gradient(
       to bottom,
       rgba(0,0,0,.06) 25%,
       rgba(0,0,0,.25) 58%,
       rgba(0,0,0,.88) 100%
-    ),
-    url("gardel%20III.png") center center/cover no-repeat;
+    );
 
-  transition:.2s ease;
+  z-index:1;
+  pointer-events:none;
 }
 
 .hero:hover{
@@ -99,6 +121,9 @@ a{
 }
 
 .hero-content{
+  position:relative;
+  z-index:2;
+
   width:100%;
   padding:20px;
   text-align:left;
@@ -379,6 +404,17 @@ Canciones para encontrarnos
   rel="noopener"
 >
 
+<video
+  class="hero-video"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="auto"
+>
+  <source src="BUCLE%20QUEDATE%20ASI.mp4" type="video/mp4">
+</video>
+
 <div class="hero-content">
 
 <div class="spotify-cta">
@@ -478,7 +514,6 @@ TikTok
 
 </a>
 
-
 </div>
 
 </section>
@@ -492,7 +527,6 @@ TikTok
 
 <div class="dates">
 
-
 <div class="date">
 <div class="when">27 SEP</div>
 <div class="where">
@@ -500,7 +534,6 @@ Fundación Soldi
 <span>Glew · 13:30 hs</span>
 </div>
 </div>
-
 
 <div class="date">
 <div class="when">10 OCT</div>
@@ -510,7 +543,6 @@ Casa Contrakultura
 </div>
 </div>
 
-
 <div class="date">
 <div class="when">11 OCT</div>
 <div class="where">
@@ -518,7 +550,6 @@ Campo Amat
 <span>Monte Grande · 20:00 hs</span>
 </div>
 </div>
-
 
 <div class="date">
 <div class="when">21 OCT</div>
@@ -528,7 +559,6 @@ TV Pública · La Noche es Nuestra
 </div>
 </div>
 
-
 <div class="date">
 <div class="when">11 DIC</div>
 <div class="where">
@@ -537,7 +567,6 @@ El Templo Bar
 </div>
 </div>
 
-
 <div class="date">
 <div class="when">18 DIC</div>
 <div class="where">
@@ -545,7 +574,6 @@ Teatro Greison
 <span>Monte Grande · 21:00 hs</span>
 </div>
 </div>
-
 
 </div>
 
@@ -572,10 +600,8 @@ Teatro Greison
 </div>
 
 <div class="contact-text">
-
 <small>CONTACTO</small>
 soltarrock@gmail.com
-
 </div>
 
 </a>
